@@ -1,10 +1,22 @@
-local_costmap:
-    global_frame: odom
-    robot_base_frame: base_link
-    update_frequency: 5.0 
-    publish_frequency: 2.0
-    static_map: false
-    rolling_window: true
-    width: 6.0
-    height: 6.0
-    resolution: 0.05
+local_costmap: {
+
+  global_frame:       odom,
+  robot_base_frame:   base_link,
+  update_frequency:   5.0 ,
+  publish_frequency:  2.0,
+  static_map:         false,
+  rolling_window:     true,
+  width:              25.0,
+  height:             25.0,
+  resolution:         0.1,
+
+  obstacle_range:       25.0,
+  raytrace_range:       30.0,
+  footprint:            [[0.6, -0.25], [0.6, 0.25], [-0.6, 0.25], [-0.6, -0.25]],
+  inflation_radius:     200.0,
+  #robot_radius: ir_of_robot,
+  cost_scaling_factor:  3.5,
+  observation_sources:  laser_scan_sensor ,
+  laser_scan_sensor: {sensor_frame: base_laser, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+
+}

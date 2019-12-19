@@ -5,12 +5,11 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /Status1
         - /TF_diff11/Frames1
         - /TF_diff11/Tree1
-        - /LaserScan_diff21/Status1
-        - /Map_diff11/Status1
-        - /Local Map_diff11/Cost Cloud1/Status1
-        - /Full Plan_diff21
+        - /Local Map_diff11/Costmap1
+        - /Local Map_diff11/Planner1
       Splitter Ratio: 0.5
     Tree Height: 843
   - Class: rviz/Selection
@@ -32,7 +31,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan_diff1
+    SyncSource: ""
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
@@ -77,35 +76,13 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        diffboat1/base_laser:
-          Value: true
-        diffboat1/base_link:
-          Value: true
-        diffboat1/odom:
-          Value: true
-        diffboat2/base_laser:
-          Value: true
-        diffboat2/base_link:
-          Value: true
-        diffboat2/odom:
-          Value: true
-        map:
-          Value: true
       Marker Scale: 1
       Name: TF_diff1
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        map:
-          diffboat1/odom:
-            diffboat1/base_link:
-              diffboat1/base_laser:
-                {}
-          diffboat2/odom:
-            diffboat2/base_link:
-              diffboat2/base_laser:
-                {}
+        {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -123,9 +100,9 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 0
+      Max Intensity: 999999
       Min Color: 0; 0; 0
-      Min Intensity: -930.500977
+      Min Intensity: 0
       Name: LaserScan_diff1
       Position Transformer: XYZ
       Queue Size: 10
@@ -137,36 +114,6 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: true
-    - Alpha: 1
-      Autocompute Intensity Bounds: true
-      Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
-        Value: true
-      Axis: Z
-      Channel Name: intensity
-      Class: rviz/LaserScan
-      Color: 255; 255; 255
-      Color Transformer: Intensity
-      Decay Time: 0
-      Enabled: true
-      Invert Rainbow: false
-      Max Color: 255; 255; 255
-      Max Intensity: 0
-      Min Color: 0; 0; 255
-      Min Intensity: -926.137695
-      Name: LaserScan_diff2
-      Position Transformer: XYZ
-      Queue Size: 10
-      Selectable: true
-      Size (Pixels): 3
-      Size (m): 0.100000001
-      Style: Squares
-      Topic: /diffboat2/scan
-      Unreliable: false
-      Use Fixed Frame: true
-      Use rainbow: false
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -205,16 +152,6 @@ Visualization Manager:
       Enabled: true
       Name: Map_diff1
       Topic: /diffboat1/map
-      Unreliable: false
-      Use Timestamp: false
-      Value: true
-    - Alpha: 0.699999988
-      Class: rviz/Map
-      Color Scheme: map
-      Draw Behind: false
-      Enabled: true
-      Name: Map_diff2
-      Topic: /diffboat2/map
       Unreliable: false
       Use Timestamp: false
       Value: true
@@ -257,13 +194,13 @@ Visualization Manager:
       Name: Global Map_diff1
     - Class: rviz/Group
       Displays:
-        - Alpha: 0.699999988
+        - Alpha: 1
           Class: rviz/Map
-          Color Scheme: costmap
+          Color Scheme: map
           Draw Behind: false
           Enabled: true
           Name: Costmap
-          Topic: /diffboat2/move_base/global_costmap/costmap
+          Topic: /diffboat1/move_base/local_costmap/costmap
           Unreliable: false
           Use Timestamp: false
           Value: true
@@ -287,7 +224,7 @@ Visualization Manager:
           Radius: 0.0299999993
           Shaft Diameter: 0.100000001
           Shaft Length: 0.100000001
-          Topic: /diffboat2/move_base/TrajectoryPlannerROS/local_plan
+          Topic: /diffboat1/move_base/RRAPlannerROS/local_plan
           Unreliable: false
           Value: true
         - Alpha: 0.800000012
@@ -407,29 +344,6 @@ Visualization Manager:
       Topic: /diffboat1/move_base/NavfnROS/plan
       Unreliable: false
       Value: true
-    - Alpha: 1
-      Buffer Length: 1
-      Class: rviz/Path
-      Color: 0; 0; 255
-      Enabled: true
-      Head Diameter: 0.300000012
-      Head Length: 0.200000003
-      Length: 0.300000012
-      Line Style: Lines
-      Line Width: 0.0299999993
-      Name: Full Plan_diff2
-      Offset:
-        X: 0
-        Y: 0
-        Z: 0
-      Pose Color: 255; 85; 255
-      Pose Style: None
-      Radius: 0.0299999993
-      Shaft Diameter: 0.100000001
-      Shaft Length: 0.100000001
-      Topic: /diffboat2/move_base/NavfnROS/plan
-      Unreliable: false
-      Value: true
     - Angle Tolerance: 0.100000001
       Class: rviz/Odometry
       Covariance:
@@ -518,7 +432,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: map
+    Fixed Frame: diffboat1/map
     Frame Rate: 30
   Name: root
   Tools:
@@ -539,7 +453,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -3.14504051
+      Angle: -6.29002523
       Class: rviz/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
@@ -549,11 +463,11 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Scale: 64.6176605
+      Scale: 62.7700729
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz)
-      X: 9.2569046
-      Y: 5.41644382
+      X: 10.8799686
+      Y: 6.3954792
     Saved: ~
 Window Geometry:
   Displays:
