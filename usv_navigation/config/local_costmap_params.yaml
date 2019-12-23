@@ -6,9 +6,9 @@ local_costmap: {
   publish_frequency:  2.0,
   static_map:         false,
   rolling_window:     true,
-  width:              25.0,
-  height:             25.0,
-  resolution:         0.1,
+  width:              15.0,
+  height:             15.0,
+  resolution:         0.250,
 
   obstacle_range:       25.0,
   raytrace_range:       30.0,
@@ -16,9 +16,10 @@ local_costmap: {
   inflation_radius:     200.0,
   #robot_radius: ir_of_robot,
   cost_scaling_factor:  2.5,
-  observation_sources:  laser_scan_sensor ais_fake,
-  laser_scan_sensor:  {sensor_frame: base_laser, data_type: LaserScan, topic: scan, marking: true, clearing: true},
-  ais_fake:           {sensor_frame: base_laser, data_type: LaserScan, topic: ais, marking: true, clearing: true}
+  # observation_sources:  laser_scan_sensor ais_fake,
+  observation_sources:  laser_scan_sensor,
+  laser_scan_sensor:  {sensor_frame: base_laser, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+  # ais_fake:           {sensor_frame: base_laser, data_type: LaserScan, topic: ais, marking: true, clearing: true}
   # ais_fake:           {sensor_frame: base_laser, data_type: PointCloud2, topic: ais, marking: true, clearing: true}
 
 }
