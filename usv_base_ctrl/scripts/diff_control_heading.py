@@ -51,8 +51,8 @@ def thruster_ctrl_msg():
         left = 0
     if (right < 0):
         right  = 0  
-    left    *=  0.0025
-    right   *=  0.0025
+    left    *=  0.0015
+    right   *=  0.0015
 
 
     msg.position = [left, right]

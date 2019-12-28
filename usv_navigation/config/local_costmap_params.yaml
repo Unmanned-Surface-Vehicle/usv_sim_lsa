@@ -6,8 +6,8 @@ local_costmap: {
   publish_frequency:  2.0,
   static_map:         false,
   rolling_window:     true,
-  width:              15.0,
-  height:             15.0,
+  width:              20.0,
+  height:             20.0,
   resolution:         0.250,
 
   obstacle_range:       25.0,
