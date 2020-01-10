@@ -1,4 +1,4 @@
-image: /home/marcelo/usv_sim_ws_darlan/src/usv_sim_lsa/usv_navigation/maps/diluvio2c.pgm
+image: /home/darlan/ROS/catkin_ws/src/usv_sim_lsa/usv_navigation/maps/diluvio2c.pgm
 resolution: 1
 origin: [0.000000, 0.000000, 0.000000]
 negate: 0
