@@ -59,6 +59,24 @@
     </lookAt>
   </camera>
 
+  <!-- <vehicle>
+    <name>diffboat1</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 10</x>
+      <y> 5 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>0 </y>
+    </orientation>
+  </vehicle> -->
   <vehicle>
     <name>diffboat1</name>
     <file>urdf/diffboat_uwsim.urdf</file>
@@ -67,14 +85,14 @@
       <joint> 0 </joint>
     </jointValues>
      <position>
-      <x> 12</x>
-      <y> 5 </y>
+      <x> 8</x>
+      <y> 6 </y>
       <z> 1 </z>
     </position>
     <orientation>
       <r>0 </r>
       <p>0 </p>
-      <y>0 </y>
+      <y>3.1415926535 </y>
     </orientation>
   </vehicle>
 
@@ -99,7 +117,7 @@
   </vehicle> -->
 
   <!-- Croosing from RIGHT -->
-  <vehicle>
+  <!-- <vehicle>
     <name>diffboat2</name>
     <file>urdf/diffboat_uwsim.urdf</file>
     <jointValues>
@@ -116,7 +134,25 @@
       <p>0 </p>
       <y>1.57075 </y>
     </orientation>
-  </vehicle>
+  </vehicle> -->
+  <!-- <vehicle>
+    <name>diffboat2</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 3</x>
+      <y> 9 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>4.71238898 </y>
+    </orientation>
+  </vehicle> -->
 
   <!-- Croosing from LEFT -->
   <!-- <vehicle>
@@ -137,6 +173,25 @@
       <y>4.71225 </y>
     </orientation>
   </vehicle> -->
+  <vehicle>
+    <name>diffboat2</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 3</x>
+      <y> 2 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>1.570796327 </y>
+    </orientation>
+  </vehicle>
+  
 
 	<object>
     <name>left_wall</name>
