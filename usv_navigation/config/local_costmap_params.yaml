@@ -13,9 +13,9 @@ local_costmap: {
   obstacle_range:       25.0,
   raytrace_range:       30.0,
   footprint:            [[0.6, -0.25], [0.6, 0.25], [-0.6, 0.25], [-0.6, -0.25]],
-  inflation_radius:     200.0,
+  inflation_radius:     4000.0,
   #robot_radius: ir_of_robot,
-  cost_scaling_factor:  2.5,
+  cost_scaling_factor:  0.5,
   # observation_sources:  laser_scan_sensor ais_fake,
   observation_sources:  laser_scan_sensor,
   laser_scan_sensor:  {sensor_frame: base_laser, data_type: LaserScan, topic: scan, marking: true, clearing: true}

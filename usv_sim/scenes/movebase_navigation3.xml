@@ -59,7 +59,7 @@
     </lookAt>
   </camera>
 
-  <!-- <vehicle>
+  <vehicle>
     <name>diffboat1</name>
     <file>urdf/diffboat_uwsim.urdf</file>
     <jointValues>
@@ -67,7 +67,7 @@
       <joint> 0 </joint>
     </jointValues>
      <position>
-      <x> 10</x>
+      <x> 2</x>
       <y> 5 </y>
       <z> 1 </z>
     </position>
@@ -76,8 +76,8 @@
       <p>0 </p>
       <y>0 </y>
     </orientation>
-  </vehicle> -->
-  <vehicle>
+  </vehicle>
+  <!-- <vehicle>
     <name>diffboat1</name>
     <file>urdf/diffboat_uwsim.urdf</file>
     <jointValues>
@@ -94,10 +94,10 @@
       <p>0 </p>
       <y>3.1415926535 </y>
     </orientation>
-  </vehicle>
+  </vehicle> -->
 
   <!-- HeadOn -->
-  <!-- <vehicle>
+  <vehicle>
     <name>diffboat2</name>
     <file>urdf/diffboat_uwsim.urdf</file>
     <jointValues>
@@ -114,7 +114,7 @@
       <p>0 </p>
       <y>3.1415 </y>
     </orientation>
-  </vehicle> -->
+  </vehicle>
 
   <!-- Croosing from RIGHT -->
   <!-- <vehicle>
@@ -173,7 +173,7 @@
       <y>4.71225 </y>
     </orientation>
   </vehicle> -->
-  <vehicle>
+  <!-- <vehicle>
     <name>diffboat2</name>
     <file>urdf/diffboat_uwsim.urdf</file>
     <jointValues>
@@ -190,7 +190,7 @@
       <p>0 </p>
       <y>1.570796327 </y>
     </orientation>
-  </vehicle>
+  </vehicle> -->
   
 
 	<object>
