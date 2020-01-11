@@ -57,11 +57,9 @@
 		 	<param name="frame_id" value="/$(arg namespace)/map" />
 		</node>
 		<node pkg="tf" type="static_transform_publisher" name="world_map_tf" args="0 0 0 0 0 0 1 world $(arg namespace)/map 10" ns="$(arg namespace)"/>
-		
-		
 
 		 <!-- AMCL -->
-		<include file="$(find usv_navigation)/launch/amcl3.launch">
+		<!-- <include file="$(find usv_navigation)/launch/amcl3.launch">
 			<arg name="use_map_topic"   value="false"/>
 			<arg name="scan_topic"      value="/$(arg namespace)/scan"/> 
 			<arg name="initial_pose_x"  value="430.0"/>
@@ -71,6 +69,18 @@
 			<arg name="base_frame_id"   value="/$(arg namespace)/base_link"/>
 			<arg name="global_frame_id" value="/$(arg namespace)/map"/>
 			<arg name="namespace"   value="$(arg namespace)"/>
+		</include> -->
+
+		<!-- Fake Localization -->
+		<include file="$(find usv_navigation)/launch/fake_localization.launch">
+
+			<arg name="odom_frame_id"   value="$(arg namespace)/odom"/>
+			<arg name="base_frame_id"   value="$(arg namespace)/base_link"/>
+			<arg name="global_frame_id" value="$(arg namespace)/map"/>
+			<arg name="state_topic"     value="/$(arg namespace)/state"/> 
+			<arg name="initpos_topic"   value="/$(arg namespace)/initialpose"/> 
+			<arg name="namespace"   		value="$(arg namespace)"/>
+
 		</include>
 		
 
