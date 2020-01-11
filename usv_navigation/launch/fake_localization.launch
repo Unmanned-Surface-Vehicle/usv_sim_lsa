@@ -1,0 +1,19 @@
+
+<launch>
+
+		<arg name="odom_frame_id"   default="/odom"/>
+		<arg name="base_frame_id"   default="/base_link"/>
+		<arg name="global_frame_id" default="/map"/>
+		<arg name="state_topic"     default="/state"/>				
+		<arg name="initpos_topic"   default="/initialpose"/>				
+		<arg name="namespace"   		default="diffboat"/>
+
+		<node pkg="fake_localization" type="fake_localization" name="fake_localization" ns="$(arg namespace)">
+			<param name="odom_frame_id"             value="$(arg odom_frame_id)"/> 
+			<param name="base_frame_id"             value="$(arg base_frame_id)"/> 
+			<param name="global_frame_id"           value="$(arg global_frame_id)"/>
+			<remap from="base_pose_ground_truth"		to="$(arg state_topic)"/>
+			<remap from="initialpose"								to="$(arg initpos_topic)"/>	
+		</node>
+
+</launch>
