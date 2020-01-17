@@ -48,12 +48,12 @@
     <near> 1 </near>
     <far> 10000 </far>
     <position>
-      <x>440</x>
+      <x>340</x>
       <y>115 </y>
       <z>15 </z>
     </position> 
     <lookAt>
-      <x>457</x>
+      <x>357</x>
       <y>115 </y>
       <z>5 </z>
     </lookAt>
@@ -67,14 +67,14 @@
       <joint> 0 </joint>
     </jointValues>
      <position>
-      <x> 450</x>
-      <y> 107.5 </y>
-      <z> 1 </z>
+      <x> 395 </x>
+      <y> 120 </y>
+      <z> 1   </z>
     </position>
     <orientation>
-      <r>0 </r>
-      <p>0 </p>
-      <y>0 </y>
+      <r> 0 </r>
+      <p> 0 </p>
+      <y> 5.497787144	 </y>
     </orientation>
   </vehicle>
 
@@ -86,14 +86,14 @@
       <joint> 0 </joint>
     </jointValues>
      <position>
-      <x> 461</x>
-      <y> 107.5 </y>
-      <z> 1 </z>
+      <x> 422.5 </x>
+      <y> 102.5 </y>
+      <z> 1   </z>
     </position>
     <orientation>
       <r>0 </r>
       <p>0 </p>
-      <y>3.1415 </y>
+      <y>0 </y>
     </orientation>
   </vehicle>
 

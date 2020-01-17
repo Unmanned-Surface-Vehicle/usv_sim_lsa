@@ -32,10 +32,11 @@
 		
 
 
-		<include file="$(find usv_sim_rviz)/launch/movebase_navigation3.launch" /> 
+		<include file="$(find usv_sim_rviz)/launch/movebase_navigation_colregs.launch" /> 
 
 		<!-- recording experiment -->
-		<node pkg="rosbag" type="record" name="record_diffboat" args="-O $(find usv_navigation)/bags/diffboat_scenario1.bag /diffboat/state" output="screen" if="$(arg rec)"/>
+		<!-- <node pkg="rosbag" type="record" name="record_diffboat1" args="-O $(find usv_navigation)/bags/diffboat_scenario1.bag /diffboat1/state" output="screen" if="$(arg rec)"/> -->
+		<!-- <node pkg="rosbag" type="record" name="record_diffboat2" args="-O $(find usv_navigation)/bags/diffboat_scenario2.bag /diffboat2/state" output="screen" if="$(arg rec)"/> -->
 
 	</group>
 
@@ -108,7 +109,7 @@
 			<arg name="velocityControl" default="false"/>
         </include>
 
-		<node name="patrol" pkg="usv_navigation" type="patrol_pid_headon1.py" ns="diffboat2" unless="$(arg gui)" output="screen"/>
+		<node name="patrol" pkg="usv_navigation" type="patrol_pid_Huang2019_CrossingRight.py" ns="diffboat2" unless="$(arg gui)" output="screen"/>
 		
 	</group>
 			

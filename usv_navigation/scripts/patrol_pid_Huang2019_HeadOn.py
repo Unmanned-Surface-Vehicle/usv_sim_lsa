@@ -9,31 +9,9 @@ import rosbag
 import subprocess
 import os
 
-# Head-On
-# waypoints = [
-#     [(2.0, 5.0, 1.0), (0.0, 0.0, 0.0, 1.0)]
-#     # [(18.0, 5.5, 1.0), (0.0, 0.0, 0.0, 1.0)]
-# ]
-
-# Crossing from RIGHT
-# waypoints = [
-#     [(15.0, 9.0, 1.0), (15.0, 2.0, 0.0, 1.0)]
-# ]
-# waypoints = [
-#     [(3.0, 2.0, 1.0), (3.0, 2.0, 1.0)]
-# ]
-# waypoints = [
-#     [(404.0, 105.0, 1.0), (416.0, 120.0, 1.0)]
-# ]
-
-# Crossing from LEFT
-# waypoints = [
-#     [(15.0, 2.0, 1.0), (15.0, 9.0, 1.0)]
-# ]
-# waypoints = [
-#     [(3.0, 9.0, 1.0), (3.0, 2.0, 1.0)]
-# ]
-
+waypoints = [
+    [(350.0, 107.0, 1.0), (0.0, 0.0, 0.0, 1.0)]
+]
 result = Float64()
 result.data = 0
 x_offset = 0
