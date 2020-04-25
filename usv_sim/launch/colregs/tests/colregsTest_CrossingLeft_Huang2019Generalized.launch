@@ -24,14 +24,14 @@
 	    </include>
 
 		<!-- launch uwsim -->
-		<node name="uwsim" pkg="uwsim" type="uwsim" args="$(arg disableShaders) --dataPath $(find usv_sim) --configfile scenes/colregs/tests/colregsTest_HeadOn_Huang2019Generalized.xml" respawn="false" required="true"/>
+		<node name="uwsim" pkg="uwsim" type="uwsim" args="$(arg disableShaders) --dataPath $(find usv_sim) --configfile scenes/colregs/tests/colregsTest_CrossingLeft_Huang2019Generalized.xml" respawn="false" required="true"/>
 		
 		<!-- using parser  -->
-		<include file="$(find usv_sim)/launch/colregs/tests/colregsTest_HeadOn_Huang2019Generalized_spawner.launch"/>
-		<include file="$(find usv_sim_rviz)/launch/movebase_navigation_HeadOn_Huang2019Generalized.launch" /> 
+		<include file="$(find usv_sim)/launch/colregs/tests/colregsTest_CrossingLeft_Huang2019Generalized_spawner.launch"/>
+		<include file="$(find usv_sim_rviz)/launch/movebase_navigation_CrossingRight_Huang2019Generalized.launch" /> 
 
 		<!-- recording experiment -->
-		<!-- <node pkg="rosbag" type="record" name="record_diffboat1_HeadOn" args="-O $(find usv_navigation)/bags/diffboat1_colregs_HeadOn_Huan2019.bag /diffboat1/state" output="screen" if="$(arg rec)"/> -->
+		<!-- <node pkg="rosbag" type="record" name="record_diffboat" args="-O $(find usv_navigation)/bags/diffboat_scenario1.bag /diffboat/state" output="screen" if="$(arg rec)"/> -->
 
 	</group>
 
@@ -104,13 +104,13 @@
 			<arg name="velocityControl" default="false"/>
         </include>
 
-		<node name="patrol" pkg="usv_navigation" type="patrol_pid_colregs_HeadOn_Huang2019.py" ns="diffboat2" unless="$(arg gui)" output="screen"/>
+		<node name="patrol" pkg="usv_navigation" type="patrol_pid_colregs_CrossingLeft_Huang2019.py" ns="diffboat2" unless="$(arg gui)" output="screen"/>
 		
 	</group>
 			
 	<!-- parse launch file -->
 	<group if="$(arg parse)">
-		<node name="scene_to_spawner" pkg="freefloating_gazebo" type="uwsim_scene_to_gazebo_spawner.py" args="$(find usv_sim)/launch/colregs/tests/colregsTest_HeadOn_Huang2019Generalized.launch" output="screen" required="true"/>
+		<node name="scene_to_spawner" pkg="freefloating_gazebo" type="uwsim_scene_to_gazebo_spawner.py" args="$(find usv_sim)/launch/colregs/tests/colregsTest_CrossingLeft_Huang2019Generalized.launch" output="screen" required="true"/>
 	</group>
 
 </launch>

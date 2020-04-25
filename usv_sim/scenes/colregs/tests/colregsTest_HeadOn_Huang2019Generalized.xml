@@ -67,8 +67,8 @@
       <joint> 0 </joint>
     </jointValues>
      <position>
-      <x> 450</x>
-      <y> 107.5 </y>
+      <x> 450 </x>
+      <y> 109 </y>
       <z> 1 </z>
     </position>
     <orientation>
@@ -87,7 +87,7 @@
     </jointValues>
      <position>
       <x> 461</x>
-      <y> 107.5 </y>
+      <y> 109 </y>
       <z> 1 </z>
     </position>
     <orientation>

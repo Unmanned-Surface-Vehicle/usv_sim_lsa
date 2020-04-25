@@ -6,7 +6,7 @@
   <oceanState>
     <windx> 1.0 </windx>
     <windy> 1.0 </windy>
-    <windSpeed> 0.0 </windSpeed>
+    <windSpeed> 2.0 </windSpeed>
     <depth> 100 </depth>
     <reflectionDamping> 0.35 </reflectionDamping>
     <waveScale> 5e-8 </waveScale>
@@ -67,14 +67,14 @@
       <joint> 0 </joint>
     </jointValues>
      <position>
-      <x> 395 </x>
-      <y> 120 </y>
+      <x> 410 </x>
+      <y> 105 </y>
       <z> 1   </z>
     </position>
     <orientation>
-      <r> 0 </r>
-      <p> 0 </p>
-      <y> 5.497787144	 </y>
+      <r>0 </r>
+      <p>0 </p>
+      <y>1.570796327	 </y>
     </orientation>
   </vehicle>
 
@@ -86,14 +86,14 @@
       <joint> 0 </joint>
     </jointValues>
      <position>
-      <x> 422.5 </x>
-      <y> 102.5 </y>
+      <x> 415 </x>
+      <y> 120 </y>
       <z> 1   </z>
     </position>
     <orientation>
       <r>0 </r>
       <p>0 </p>
-      <y>0 </y>
+      <y>3.752457892 </y>
     </orientation>
   </vehicle>
 

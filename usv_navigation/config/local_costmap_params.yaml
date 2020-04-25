@@ -2,7 +2,7 @@ local_costmap: {
 
   global_frame:       odom,
   robot_base_frame:   base_link,
-  update_frequency:   1.0 ,
+  update_frequency:   2.0 ,
   publish_frequency:  0.5,
   static_map:         false,
   rolling_window:     true,
@@ -20,6 +20,7 @@ local_costmap: {
   inflation_radius:     20.0,
   #robot_radius: ir_of_robot,
   cost_scaling_factor:  0.2,
+  # cost_scaling_factor:  2.5,
   # observation_sources:  laser_scan_sensor ais_fake,
   observation_sources:  laser_scan_sensor,
   laser_scan_sensor:  {sensor_frame: base_laser, data_type: LaserScan, topic: scan, marking: true, clearing: true}

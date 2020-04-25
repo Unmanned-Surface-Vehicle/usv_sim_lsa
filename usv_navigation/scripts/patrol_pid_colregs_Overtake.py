@@ -10,7 +10,7 @@ import subprocess
 import os
 
 waypoints = [
-    [(500.0, 102.5, 1.0), (395.0, 102.5, 1.0)]
+    [(600.0, 107.0, 1.0), (0.0, 0.0, 0.0, 1.0)]
 ]
 result = Float64()
 result.data = 0
